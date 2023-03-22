@@ -1,7 +1,10 @@
+<a href="/dealerships">Dealership Index</a> &nbsp&nbsp&nbsp&nbsp&nbsp <a href="/cars">Car Index</a>
+
 <h1>All Cars</h1>
 
 <% @cars.each do |car| %>
-  <h3><a href="/cars/<%= car.id %>"><%= car.year %> <%= car.make %> <%= car.model %></a></h3>
+  <% if car.ev == true %>
+  <h4><a href="/cars/<%= car.id %>"><%= car.year %> <%= car.make %> <%= car.model %></a>, <font size="-1"><a href="/cars/<%= car.id %>/edit">Update Car</a></font></h4>
   <p><%= car.year %> <%= car.make %>, <%= car.model %> <%= car.miles %> miles, ev: <%= car.ev %> </p>
   <p> created at: <%= car.created_at %>, updated at: <%= car.updated_at %></p>
   <a href="/cars/<%= car.id  %>/edit">Edit</a>
@@ -10,6 +13,9 @@
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" value="delete"/>
   </form>
+  <%end%>
 <% end %>
+
+<a href="/cars/new">New Car</a>
 
 <p><a href="/">Home</a></p>

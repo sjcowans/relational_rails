@@ -1,8 +1,22 @@
+<a href="/dealerships">Dealership Index</a> &nbsp&nbsp&nbsp&nbsp&nbsp <a href="/cars">Car Index</a>
+
 <form action="/cars/<%= @car.id %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PATCH" />
   <p>Edit</p>
-  <input type='text' name='car[make]' value="<%= @car.make %>"/><br/>
-  <textarea name='car[model]'><%= @car.model %></textarea><br/>
+  <p> make: </p>
+  <input type='text' name='car[make]'/><br/>
+  <p> model: </p>
+  <input type='text' name='car[model]'/><br/>
+  <p> year: </p>
+  <input type='text' name='car[year]'/><br/>
+  <p> miles: </p>
+  <input type='text' name='car[miles]'/><br/>
+  <p> ev: </p>
+  <input type='text' name='car[ev]'/><br/>
+  <p> dealership_id: </p>
+  <input type='text' name='car[dealership_id]'/><br/>
   <input type='submit'/>
 </form>
+
+<p><a href="/">Home</a></p>

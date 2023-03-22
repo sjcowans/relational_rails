@@ -1,0 +1,9 @@
+<% @cars.each do |car| %>
+  <h4><a href="/cars/<%= car.id %>"><%= car.year %> <%= car.make %> <%= car.model %></a>, <font size="-1"><a href="/cars/<%= car.id %>/edit">Update Car</a></font></h4>
+  <p><%= car.year %> <%= car.make %>, <%= car.model %> <%= car.miles %> miles, ev: <%= car.ev %> </p>
+  <p> created at: <%= car.created_at %>, updated at: <%= car.updated_at %></p>
+<% end %>
+
+<a href="/dealerships/<%= @dealership.id %>/cars/alphabetized"> Alphabetical Order</a>
+
+<p><a href="/">Home</a></p>

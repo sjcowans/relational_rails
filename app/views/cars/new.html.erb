@@ -1,3 +1,5 @@
+<a href="/dealerships">Dealership Index</a> &nbsp&nbsp&nbsp&nbsp&nbsp <a href="/cars">Car Index</a>
+
 <form action="/cars" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <h2><p>Enter a new car:</p></h2>
@@ -11,5 +13,9 @@
   <input type='text' name='car[miles]'/><br/>
   <p> ev: </p>
   <input type='text' name='car[ev]'/><br/>
+  <p> dealership_id: </p>
+  <input type='text' name='car[dealership_id]'/><br/>
   <input type='submit'/>
 </form>
+
+<p><a href="/">Home</a></p>

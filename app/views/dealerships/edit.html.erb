@@ -1,8 +1,16 @@
+<a href="/dealerships">Dealership Index</a> &nbsp&nbsp&nbsp&nbsp&nbsp <a href="/cars">Car Index</a>
+
 <form action="/dealerships/<%= @dealership.id %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PATCH" />
   <p>Edit</p>
-  <input type='text' name='dealership[name]' value="<%= @dealership.name %>"/><br/>
-  <textarea name='dealership[zip]'><%= @dealership.zip %></textarea><br/>
+  <p> name: </p>
+  <input type='text' name='dealership[name]'/><br/>
+  <p> zip: </p>
+  <input type='text' name='dealership[zip]'/><br/>
+  <p> operational: </p>
+  <input type='text' name='dealership[operational]'/><br/>
   <input type='submit'/>
 </form>
+
+<p><a href="/">Home</a></p>

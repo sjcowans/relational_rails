@@ -1,7 +1,15 @@
+<a href="/dealerships">Dealership Index</a> &nbsp&nbsp&nbsp&nbsp&nbsp <a href="/cars">Car Index</a>
+
 <form action="/dealerships" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p>Enter a new dealership:</p>
+  <p> name: </p>
   <input type='text' name='dealership[name]'/><br/>
-  <textarea name='dealership[zip]'></textarea><br/>
+  <p> zip: </p>
+  <input type='text' name='dealership[zip]'/><br/>
+  <p> operational: </p>
+  <input type='text' name='dealership[operational]'/><br/>
   <input type='submit'/>
 </form>
+
+<p><a href="/">Home</a></p>

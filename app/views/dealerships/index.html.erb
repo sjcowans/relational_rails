@@ -1,5 +1,10 @@
+<a href="/dealerships">Dealership Index</a> &nbsp&nbsp&nbsp&nbsp&nbsp <a href="/cars">Car Index</a>
+
 <h1>All Dealerships</h1>
 
 <% @dealerships.each do |dealership| %>
- <p><%= dealership.name %></p>
-<% end %>
+  <h4><a href="/dealerships/<%= dealership.id %>"><%= dealership.name %></a>,  <font size="-1"><a href="/dealerships/<%= dealership.id %>/edit">Update Dealership</a> <%= dealership.created_at %></h4></font><% end %>
+
+<a href="/dealerships/new">New Dealership</a>
+
+<p><a href="/">Home</a></p>

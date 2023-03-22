@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_22_184109) do
+ActiveRecord::Schema.define(version: 2023_03_22_194422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,11 +23,16 @@ ActiveRecord::Schema.define(version: 2023_03_22_184109) do
     t.boolean "ev"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer "dealership_id"
+    t.index ["dealership_id"], name: "index_cars_on_dealership_id"
   end
 
   create_table "dealerships", force: :cascade do |t|
     t.string "name"
     t.integer "zip"
+    t.boolean "operational"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

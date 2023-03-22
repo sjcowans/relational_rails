@@ -14,7 +14,8 @@ class CarsController < ApplicationController
       miles: params[:car][:miles],
       ev: params[:car][:ev],
       created_at: params[:car][:created_at],
-      updated_at: params[:car][:updated_at]
+      updated_at: params[:car][:updated_at],
+      dealership_id: params[:car][:dealership_id]
     })
     car.save
     redirect_to '/cars'
@@ -37,7 +38,8 @@ class CarsController < ApplicationController
       miles: params[:car][:miles],
       ev: params[:car][:ev],
       created_at: params[:car][:created_at],
-      updated_at: params[:car][:updated_at]
+      updated_at: params[:car][:updated_at],
+      dealership_id: params[:car][:dealership_id]
       })
     car.save
     redirect_to "/cars/#{car.id}"
