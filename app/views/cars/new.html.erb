@@ -1,0 +1,15 @@
+<form action="/cars" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <h2><p>Enter a new car:</p></h2>
+  <p> make: </p>
+  <input type='text' name='car[make]'/><br/>
+  <p> model: </p>
+  <input type='text' name='car[model]'/><br/>
+  <p> year: </p>
+  <input type='text' name='car[year]'/><br/>
+  <p> miles: </p>
+  <input type='text' name='car[miles]'/><br/>
+  <p> ev: </p>
+  <input type='text' name='car[ev]'/><br/>
+  <input type='submit'/>
+</form>

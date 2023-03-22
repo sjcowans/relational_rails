@@ -1,0 +1,8 @@
+<form action="/cars/<%= @car.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p>Edit</p>
+  <input type='text' name='car[make]' value="<%= @car.make %>"/><br/>
+  <textarea name='car[model]'><%= @car.model %></textarea><br/>
+  <input type='submit'/>
+</form>
