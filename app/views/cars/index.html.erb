@@ -1,8 +1,9 @@
 <h1>All Cars</h1>
 
 <% @cars.each do |car| %>
-  <h3><a href="/cars/<%= car.id %>"><%= car.year car.make car.model%></a></h3>
-  <p><%= car.model %></p>
+  <h3><a href="/cars/<%= car.id %>"><%= car.year %> <%= car.make %> <%= car.model %></a></h3>
+  <p><%= car.year %> <%= car.make %>, <%= car.model %> <%= car.miles %> miles, ev: <%= car.ev %> </p>
+  <p> created at: <%= car.created_at %>, updated at: <%= car.updated_at %></p>
   <a href="/cars/<%= car.id  %>/edit">Edit</a>
   <form action="/cars/<%= car.id %>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -10,3 +11,5 @@
     <input type="submit" value="delete"/>
   </form>
 <% end %>
+
+<p><a href="/">Home</a></p>
