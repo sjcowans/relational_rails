@@ -231,7 +231,7 @@ I see a form that allows me to input a number value
 When I input a number value and click the submit button that reads 'Only return records with more than `number` of `column_name`'
 Then I am brought back to the current index page with only the records that meet that threshold shown.
 Usability
-[X] done
+[ ] done
 
 User Story 22, Parent Delete From Parent Index Page 
 
@@ -250,7 +250,7 @@ Next to every child, I see a link to delete that child
 When I click the link
 I should be taken to the `child_table_name` index page where I no longer see that child
 Extensions
-[ ] done
+[X] done
 
 Extension 1: Sort Parents by Number of Children 
 
