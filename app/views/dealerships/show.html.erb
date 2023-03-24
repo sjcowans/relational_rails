@@ -1,10 +1,8 @@
 <a href="/dealerships">Dealership Index</a> &nbsp&nbsp&nbsp&nbsp&nbsp <a href="/cars">Car Index</a>
 
-<a href="/dealerships">dealership Index</a>
-
 <h1><%= @dealership.name %></h1>
 
 <p><%= @dealership.name %>, <%= @dealership.zip %>, operational: <%= @dealership.operational %></p>
 <p> cars: <%= @dealership.count %></p>
-<a href="/dealerships/<%= @dealership.id %>/cars">Cars</a>, <a href="/dealerships/<%= @dealership.id %>/edit">Update Dealership</a>
+<a href="/dealerships/<%= @dealership.id %>/cars">Cars</a>, <a href="/dealerships/<%= @dealership.id %>/edit">Update Dealership</a>, <a href="/dealerships/<%= @dealership.id %>/delete">Delete Dealership</a>
 <p><a href="/">Home</a></p>

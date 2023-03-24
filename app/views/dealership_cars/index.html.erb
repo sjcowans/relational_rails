@@ -1,8 +1,28 @@
 <% @cars.each do |car| %>
-  <h4><a href="/cars/<%= car.id %>"><%= car.year %> <%= car.make %> <%= car.model %></a>, <font size="-1"><a href="/cars/<%= car.id %>/edit">Update Car</a></font></h4>
+  <h4><a href="/cars/<%= car.id %>"><%= car.year %> <%= car.make %> <%= car.model %></a>, <font size="-1"><a href="/cars/<%= car.id %>/edit">Update Car</a>, <a href="/cars/<%= car.id %>/delete">Delete Car</a></font></h4>
   <p><%= car.year %> <%= car.make %>, <%= car.model %> <%= car.miles %> miles, ev: <%= car.ev %> </p>
   <p> created at: <%= car.created_at %>, updated at: <%= car.updated_at %></p>
 <% end %>
+
+<form class="my-form" action="/dealerships/<%= @dealership.id %>/cars/value" method="get">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p> Cars above miles: </p>
+  <input type='number' name='miles'/><br/>
+  <input type='submit'/>
+</form>
+
+<script>
+        let form = document.querySelector(".my-form");
+
+        form.addEventListener("submit", function (e) {
+        e.preventDefault() // This prevents the window from reloading
+        
+        let formdata = new FormData(this);
+        let input = formdata.get("miles");
+        @value = input
+        alert(input);
+        });
+    </script>
 
 <a href="/dealerships/<%= @dealership.id %>/cars/alphabetized"> Alphabetical Order</a>
 

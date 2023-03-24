@@ -49,8 +49,4 @@ class CarsController < ApplicationController
     Car.destroy(params[:id])
     redirect_to '/cars'
   end
-
-  def showmethecars
-    redirect_to '/cars'
-  end
 end

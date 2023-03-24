@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get '/cars/:id/edit', to: 'cars#edit'
   patch '/cars/:id', to: 'cars#update'
   delete '/cars/:id', to: 'cars#destroy'
-  get '/showmethecars', to: 'cars#showmethecars'
   get '/dealerships', to: 'dealerships#index'
   get '/dealerships/new', to: 'dealerships#new'
   post '/dealerships', to: 'dealerships#create'
@@ -15,7 +14,9 @@ Rails.application.routes.draw do
   get '/dealerships/:id/edit', to: 'dealerships#edit'
   patch '/dealerships/:id', to: 'dealerships#update'
   delete '/dealerships/:id', to: 'dealerships#destroy'
-  get '/showmethedealerships', to: 'dealerships#showmethedealerships'
   get '/dealerships/:id/cars', to: 'dealership_cars#index'
+  get '/dealerships/:id/cars/value', to: 'dealership_cars#filter_miles'
   get '/dealerships/:id/cars/alphabetized', to: 'dealership_cars#alphabetized'
+  get '/dealerships/:id/delete', to: 'dealerships#destroy'
+  get '/cars/:id/delete', to: 'cars#destroy'
 end

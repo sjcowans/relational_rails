@@ -3,7 +3,7 @@
 <h1>All Dealerships</h1>
 
 <% @dealerships.each do |dealership| %>
-  <h4><a href="/dealerships/<%= dealership.id %>"><%= dealership.name %></a>,  <font size="-1"><a href="/dealerships/<%= dealership.id %>/edit">Update Dealership</a> <%= dealership.created_at %></h4></font><% end %>
+  <h4><a href="/dealerships/<%= dealership.id %>"><%= dealership.name %></a>,  <font size="-1"><a href="/dealerships/<%= dealership.id %>/edit">Update Dealership</a>, <a href="/dealerships/<%= dealership.id %>/delete">Delete Dealership</a> <%= dealership.created_at %></h4></font><% end %>
 
 <a href="/dealerships/new">New Dealership</a>
 

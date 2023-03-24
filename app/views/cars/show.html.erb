@@ -1,12 +1,10 @@
 <a href="/dealerships">Dealership Index</a> &nbsp&nbsp&nbsp&nbsp&nbsp <a href="/cars">Car Index</a>
 
-<a href="/cars">car Index</a>
-
 <h1><%= @car.year %> <%= @car.make %> <%= @car.model %></h1>
 
 <p><%= @car.year %> <%= @car.make %>, <%= @car.model %> <%= @car.miles %> miles, ev: <%= @car.ev %> </p>
   <p> created at: <%= @car.created_at %>, updated at: <%= @car.updated_at %></p>
 
-<a href="/@cars/<%= @car.id %>/edit">Update Car</a>
+<a href="/@cars/<%= @car.id %>/edit">Update Car</a>, <a href="/cars/<%= @car.id %>/delete">Delete Car</a>
 
 <p><a href="/">Home</a></p>
