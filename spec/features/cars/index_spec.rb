@@ -29,8 +29,6 @@ RSpec.describe "cars index page", type: :feature do
                         miles: 500,
                         ev: true,
                         dealership_id: dealership.id)
-                        
-    
     visit "/cars"
     
     expect(page).to have_content(car_3.make)

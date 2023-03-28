@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   patch '/dealerships/:id', to: 'dealerships#update'
   delete '/dealerships/:id', to: 'dealerships#destroy'
   get '/dealerships/:id/cars', to: 'dealership_cars#index'
-  get '/dealerships/:id/cars/value', to: 'dealership_cars#filter_miles'
   get '/dealerships/:id/cars/alphabetized', to: 'dealership_cars#alphabetized'
   get '/dealerships/:id/delete', to: 'dealerships#destroy'
   get '/cars/:id/delete', to: 'cars#destroy'

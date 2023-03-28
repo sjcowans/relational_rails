@@ -18,7 +18,7 @@ RSpec.describe 'the dealership creation' do
     click_link('Update Dealership')
     fill_in('dealership[name]', with: 'Honda')
     fill_in('dealership[zip]', with: 79938)
-    fill_in('dealership[operational]', with: true)
+    choose("dealership_operational_true")
     click_button('Submit')
     expect(current_path).to eq("/dealerships/#{dealership_1.id}")
     expect(page).to have_content("Honda")

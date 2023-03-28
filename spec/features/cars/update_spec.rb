@@ -32,7 +32,7 @@ RSpec.describe 'the Car creation' do
     fill_in('car[model]', with: 'Model 3')
     fill_in('car[year]', with: 2023)
     fill_in('car[miles]', with: 50)
-    fill_in('car[ev]', with: true)
+    choose('car_ev_true')
     fill_in('car[dealership_id]', with: dealership.id)
     click_on('Submit')
     expect(current_path).to eq("/cars/#{car_1.id}")

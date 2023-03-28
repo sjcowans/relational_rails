@@ -12,7 +12,7 @@ RSpec.describe 'the dealership creation' do
     visit '/dealerships/new'
     fill_in('dealership[name]', with: 'Kia')
     fill_in('dealership[zip]', with: 79938)
-    fill_in('dealership[operational]', with: true)
+    choose("dealership_operational_true")
     click_button('Submit')
 
     expect(current_path).to eq("/dealerships")

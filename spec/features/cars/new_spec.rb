@@ -17,7 +17,7 @@ RSpec.describe 'the Car creation' do
     fill_in('car[model]', with: 'Model S')
     fill_in('car[year]', with: 2023)
     fill_in('car[miles]', with: 12)
-    fill_in('car[ev]', with: true)
+    choose('car_ev_true')
     fill_in('car[dealership_id]', with: dealership.id)
     click_button('Submit')
 

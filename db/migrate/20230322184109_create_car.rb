@@ -5,7 +5,7 @@ class CreateCar < ActiveRecord::Migration[5.2]
       t.string :model
       t.integer :year
       t.integer :miles
-      t.boolean :ev
+      t.boolean :ev, null: false, default: false
       t.timestamp :created_at
       t.timestamp :updated_at
       t.bigint :dealership_id

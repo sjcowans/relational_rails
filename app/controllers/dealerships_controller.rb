@@ -1,6 +1,10 @@
 class DealershipsController < ApplicationController
   def index
-    @dealerships = Dealership.order(created_at: :desc)
+    if params[:sort].nil?
+      @dealerships = Dealership.order(created_at: :desc)
+    else 
+      @dealerships = Dealership.order(cars_count: :desc)
+    end
   end
 
   def create
