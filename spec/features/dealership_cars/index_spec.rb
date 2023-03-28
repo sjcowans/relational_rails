@@ -90,7 +90,8 @@ RSpec.describe "dealership cars index page", type: :feature do
   visit "/dealerships/#{dealership.id}/cars"
   fill_in('miles_filter', with: 40000)
   click_on('Submit')
-
+  
+  expect(Car.filter_miles(40000)).to eq([car_1])
   expect(page).to have_content(car_1.make)
   expect(page).to have_no_content(car_2.make)
   expect(page).to have_no_content(car_3.make)
@@ -142,6 +143,7 @@ RSpec.describe "dealership cars index page", type: :feature do
   expect(page).to have_content('Total Cars: 3')
   expect(page).to have_content('Total Cars: 2')
   expect(page).to have_content(dealership.count)
+  expect(dealership.count).to eq(2)
   expect(page).to have_content(dealership2.count)
   expect(dealership2.name).to appear_before(dealership.name)
   end

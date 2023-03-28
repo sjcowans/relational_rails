@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-03-27T18:42:13-06:00">2023-03-27T18:42:13-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-03-28T13:04:14-06:00">2023-03-28T13:04:14-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>447</b> relevant lines,
-    <span class="green"><b>447</b> lines covered</span> and
+    <b>449</b> relevant lines,
+    <span class="green"><b>449</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -143,7 +143,7 @@
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.25</td>
+            <td class="cell--number">1.50</td>
             
           </tr>
         
@@ -154,7 +154,7 @@
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.00</td>
+            <td class="cell--number">3.25</td>
             
           </tr>
         
@@ -370,9 +370,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#e718b6e0519abffb41d6263e982b5c28b32efc63" class="src_link" title="spec/features/dealership_cars/index_spec.rb">spec/features/dealership_cars/index_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">150</td>
-            <td class="cell--number">59</td>
-            <td class="cell--number">59</td>
+            <td class="cell--number">152</td>
+            <td class="cell--number">61</td>
+            <td class="cell--number">61</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -2049,8 +2049,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="5">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="5">
+            <span class="hits">3</span>
             
 
             
@@ -2146,8 +2146,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="4">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="10" data-linenumber="4">
+            <span class="hits">10</span>
             
 
             
@@ -8539,8 +8539,8 @@
     
 
     <div class="t-line-summary">
-      <b>59</b> relevant lines.
-      <span class="green"><b>59</b> lines covered</span> and
+      <b>61</b> relevant lines.
+      <span class="green"><b>61</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -9570,7 +9570,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  </code>
           </li>
         </div>
       
@@ -9581,7 +9581,7 @@
 
             
 
-            <code class="ruby">  expect(page).to have_content(car_1.make)</code>
+            <code class="ruby">  expect(Car.filter_miles(40000)).to eq([car_1])</code>
           </li>
         </div>
       
@@ -9592,7 +9592,7 @@
 
             
 
-            <code class="ruby">  expect(page).to have_no_content(car_2.make)</code>
+            <code class="ruby">  expect(page).to have_content(car_1.make)</code>
           </li>
         </div>
       
@@ -9603,7 +9603,7 @@
 
             
 
-            <code class="ruby">  expect(page).to have_no_content(car_3.make)</code>
+            <code class="ruby">  expect(page).to have_no_content(car_2.make)</code>
           </li>
         </div>
       
@@ -9614,7 +9614,7 @@
 
             
 
-            <code class="ruby">  expect(page).to have_no_content(car_4.make)</code>
+            <code class="ruby">  expect(page).to have_no_content(car_3.make)</code>
           </li>
         </div>
       
@@ -9625,18 +9625,18 @@
 
             
 
-            <code class="ruby">  expect(page).to have_no_content(car_5.make)</code>
+            <code class="ruby">  expect(page).to have_no_content(car_4.make)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="99">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="99">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">  expect(page).to have_no_content(car_5.make)</code>
           </li>
         </div>
       
@@ -9647,18 +9647,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="101">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="101">
+            
             
 
             
 
-            <code class="ruby">  it &#39;can sort dealerships by cars&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9669,18 +9669,18 @@
 
             
 
-            <code class="ruby">    dealership = Dealership.create!(name: &quot;Kia&quot;,</code>
+            <code class="ruby">  it &#39;can sort dealerships by cars&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="103">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="103">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                                    zip: 79938,</code>
+            
+
+            <code class="ruby">    dealership = Dealership.create!(name: &quot;Kia&quot;,</code>
           </li>
         </div>
       
@@ -9691,12 +9691,23 @@
 
             
 
+            <code class="ruby">                                    zip: 79938,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="105">
+            
+            
+
+            
+
             <code class="ruby">                                    operational: true)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="105">
+          <li class="covered" data-hits="1" data-linenumber="106">
             <span class="hits">1</span>
             
 
@@ -9707,7 +9718,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="106">
+          <li class="never" data-hits="" data-linenumber="107">
             
             
 
@@ -9718,7 +9729,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="107">
+          <li class="never" data-hits="" data-linenumber="108">
             
             
 
@@ -9729,7 +9740,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="108">
+          <li class="covered" data-hits="1" data-linenumber="109">
             <span class="hits">1</span>
             
 
@@ -9740,7 +9751,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="109">
+          <li class="never" data-hits="" data-linenumber="110">
             
             
 
@@ -9751,7 +9762,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="110">
+          <li class="never" data-hits="" data-linenumber="111">
             
             
 
@@ -9762,7 +9773,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="111">
+          <li class="never" data-hits="" data-linenumber="112">
             
             
 
@@ -9773,7 +9784,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="112">
+          <li class="never" data-hits="" data-linenumber="113">
             
             
 
@@ -9784,7 +9795,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="113">
+          <li class="never" data-hits="" data-linenumber="114">
             
             
 
@@ -9795,7 +9806,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="114">
+          <li class="covered" data-hits="1" data-linenumber="115">
             <span class="hits">1</span>
             
 
@@ -9806,7 +9817,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="115">
+          <li class="never" data-hits="" data-linenumber="116">
             
             
 
@@ -9817,24 +9828,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="116">
-            
-            
-
-            
-
-            <code class="ruby">                        year: 2023,</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="never" data-hits="" data-linenumber="117">
             
             
 
             
 
-            <code class="ruby">                        miles: 50,</code>
+            <code class="ruby">                        year: 2023,</code>
           </li>
         </div>
       
@@ -9845,7 +9845,7 @@
 
             
 
-            <code class="ruby">                        ev: false,</code>
+            <code class="ruby">                        miles: 50,</code>
           </li>
         </div>
       
@@ -9856,12 +9856,23 @@
 
             
 
+            <code class="ruby">                        ev: false,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="120">
+            
+            
+
+            
+
             <code class="ruby">                        dealership_id: dealership.id)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="120">
+          <li class="covered" data-hits="1" data-linenumber="121">
             <span class="hits">1</span>
             
 
@@ -9872,7 +9883,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="121">
+          <li class="never" data-hits="" data-linenumber="122">
             
             
 
@@ -9883,24 +9894,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="122">
-            
-            
-
-            
-
-            <code class="ruby">                        year: 2023,</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="never" data-hits="" data-linenumber="123">
             
             
 
             
 
-            <code class="ruby">                        miles: 150,</code>
+            <code class="ruby">                        year: 2023,</code>
           </li>
         </div>
       
@@ -9911,7 +9911,7 @@
 
             
 
-            <code class="ruby">                        ev: true,</code>
+            <code class="ruby">                        miles: 150,</code>
           </li>
         </div>
       
@@ -9922,12 +9922,23 @@
 
             
 
+            <code class="ruby">                        ev: true,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="126">
+            
+            
+
+            
+
             <code class="ruby">                        dealership_id: dealership2.id)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="126">
+          <li class="covered" data-hits="1" data-linenumber="127">
             <span class="hits">1</span>
             
 
@@ -9938,7 +9949,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="127">
+          <li class="never" data-hits="" data-linenumber="128">
             
             
 
@@ -9949,24 +9960,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="128">
-            
-            
-
-            
-
-            <code class="ruby">                        year: 2023,</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="never" data-hits="" data-linenumber="129">
             
             
 
             
 
-            <code class="ruby">                        miles: 500,</code>
+            <code class="ruby">                        year: 2023,</code>
           </li>
         </div>
       
@@ -9977,7 +9977,7 @@
 
             
 
-            <code class="ruby">                        ev: true,</code>
+            <code class="ruby">                        miles: 500,</code>
           </li>
         </div>
       
@@ -9988,12 +9988,23 @@
 
             
 
+            <code class="ruby">                        ev: true,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="132">
+            
+            
+
+            
+
             <code class="ruby">                        dealership_id: dealership2.id)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="132">
+          <li class="covered" data-hits="1" data-linenumber="133">
             <span class="hits">1</span>
             
 
@@ -10004,7 +10015,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="133">
+          <li class="never" data-hits="" data-linenumber="134">
             
             
 
@@ -10015,7 +10026,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="134">
+          <li class="never" data-hits="" data-linenumber="135">
             
             
 
@@ -10026,7 +10037,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="135">
+          <li class="never" data-hits="" data-linenumber="136">
             
             
 
@@ -10037,7 +10048,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="136">
+          <li class="never" data-hits="" data-linenumber="137">
             
             
 
@@ -10048,7 +10059,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="137">
+          <li class="never" data-hits="" data-linenumber="138">
             
             
 
@@ -10059,7 +10070,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="138">
+          <li class="covered" data-hits="1" data-linenumber="139">
             <span class="hits">1</span>
             
 
@@ -10070,7 +10081,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="139">
+          <li class="never" data-hits="" data-linenumber="140">
             
             
 
@@ -10081,7 +10092,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="140">
+          <li class="covered" data-hits="1" data-linenumber="141">
             <span class="hits">1</span>
             
 
@@ -10092,7 +10103,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="141">
+          <li class="never" data-hits="" data-linenumber="142">
             
             
 
@@ -10103,7 +10114,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="142">
+          <li class="covered" data-hits="1" data-linenumber="143">
             <span class="hits">1</span>
             
 
@@ -10114,7 +10125,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="143">
+          <li class="covered" data-hits="1" data-linenumber="144">
             <span class="hits">1</span>
             
 
@@ -10125,7 +10136,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="144">
+          <li class="covered" data-hits="1" data-linenumber="145">
             <span class="hits">1</span>
             
 
@@ -10136,7 +10147,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="145">
+          <li class="covered" data-hits="1" data-linenumber="146">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  expect(dealership.count).to eq(2)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="147">
             <span class="hits">1</span>
             
 
@@ -10147,7 +10169,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="146">
+          <li class="covered" data-hits="1" data-linenumber="148">
             <span class="hits">1</span>
             
 
@@ -10158,7 +10180,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="147">
+          <li class="never" data-hits="" data-linenumber="149">
             
             
 
@@ -10169,7 +10191,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="148">
+          <li class="never" data-hits="" data-linenumber="150">
             
             
 
@@ -10180,7 +10202,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="149">
+          <li class="never" data-hits="" data-linenumber="151">
             
             
 
@@ -10191,7 +10213,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="150">
+          <li class="never" data-hits="" data-linenumber="152">
             
             
 
